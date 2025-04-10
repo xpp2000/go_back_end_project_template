@@ -1,0 +1,35 @@
+basePath: /
+host: localhost:8888
+info:
+  contact: {}
+  description: This is a sample server Petstore server.
+  title: gogofly
+  version: "1.0"
+paths:
+  /api/v1/public/user/login:
+    post:
+      description: this api unfinished
+      parameters:
+      - description: User Name
+        in: formData
+        name: name
+        required: true
+        type: string
+      - description: Password
+        in: formData
+        name: password
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'Login successful" {"data": S}'
+          schema:
+            type: string
+        "401":
+          description: Login failed
+          schema:
+            type: string
+      summary: User Login
+      tags:
+      - User
+swagger: "2.0"
